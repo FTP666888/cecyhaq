@@ -1,3 +1,7 @@
+<?php include '../../php/auth.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

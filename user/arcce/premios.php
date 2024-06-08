@@ -1,5 +1,5 @@
-<?php
-session_start();
+<?php include '../../php/auth.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -78,15 +78,10 @@ session_start();
         <div class="contenido">
             <h1 class="titulo">Premios!</h1>
             <h2 class="subtitulo">Obten premios a traves de distintas acciones</h2>
-            <?php
-
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "cecyhaq";
+            <?php require_once '../../php/conn.php';
 
             // Crear conexión
-            $conn = new mysqli($servername, $username, $password, $dbname);
+            $conn = connectDB();
 
             // Verificar conexión
             if ($conn->connect_error) {
@@ -97,10 +92,16 @@ session_start();
             $usuarioID = $_SESSION['usuario'];
 
             // Obtener los puntos del usuario
-            $sql = "SELECT PuntosAcumulados FROM Usuarios WHERE ID = $usuarioID";
+            $sql = "SELECT PuntosAcumulados FROM Usuarios WHERE ID = '$usuarioID'";
             $result = $conn->query($sql);
             $row = $result->fetch_assoc();
-            $puntosUsuario = $row['PuntosAcumulados'];
+            if ($result->num_rows > 0) {
+                $row = $result->fetch_assoc();
+                $puntosUsuario = $row['PuntosAcumulados'];
+            } else {
+                // Handle the case when there are no results
+                $puntosUsuario = 0;
+            }
 
             echo "<h2>Tienes $puntosUsuario puntos.</h2>";
 

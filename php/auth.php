@@ -3,6 +3,8 @@
 session_start();
 
 if (!isset($_SESSION['usuario'])) {
-    header("Location: ../index.php?error=inicia sesion para ingresar a este recurso");
-    exit();
+    echo "<script>
+        alert('Inicia Sesion para acceder a este recurso');
+        window.location.href = '../login.php';
+        </script>";
 }
