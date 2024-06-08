@@ -92,9 +92,9 @@
             $usuarioID = $_SESSION['usuario'];
 
             // Obtener los puntos del usuario
-            $sql = "SELECT PuntosAcumulados FROM Usuarios WHERE ID = '$usuarioID'";
+            // Obtener los puntos del usuario
+            $sql = "SELECT PuntosAcumulados FROM Usuarios WHERE email = '$usuarioID'";
             $result = $conn->query($sql);
-            $row = $result->fetch_assoc();
             if ($result->num_rows > 0) {
                 $row = $result->fetch_assoc();
                 $puntosUsuario = $row['PuntosAcumulados'];

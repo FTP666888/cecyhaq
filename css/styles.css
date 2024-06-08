@@ -6,6 +6,7 @@
   --text-color: #e0e0e0;
   --input-background: #25274d;
   --btn-background: #29648a;
+  --description-color: #ffd700;
 }
 html {
   box-sizing: border-box;
@@ -289,4 +290,44 @@ input[type="submit"] {
 }
 input[type="submit"]:hover {
   background-color: #45a049;
+}
+/* premios */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 10px;
+  text-align: left;
+}
+
+table tr:nth-child(even) {
+  background-color: var(--input-background);
+}
+
+button {
+  background-color: var(--btn-background);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+table td:nth-child(1), /* ID */
+table td:nth-child(2), /* Descripción */
+table td:nth-child(3), /* Puntos Necesarios */
+table td:nth-child(4) {
+  /* Categoría */
+  color: var(--description-color);
 }
