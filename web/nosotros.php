@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -39,10 +39,10 @@
         <h1>CECYhaQ<h1>
         <h2> Hacerca del equipo :<h2>
         <h3> Zahira Estrella: Tecnica de 4to grado en Biotecnologia<h3>
-        <h4> Jafet Delgadillo: Tecnico de 4to grado en Programación<h4>
-        <h5> Cristobal Randa: Tecnico de 4to grado en Mecatronica<h5>
-        <h6> Joan López: Tecnico de 4to grado en Mecatronica<h6>
-        <h7> Fernando García: Tecnico de 2do grado en Programación<h7>
+        <h3> Jafet Delgadillo: Tecnico de 4to grado en Programación<h3>
+        <h3> Cristobal Randa: Tecnico de 4to grado en Mecatronica<h3>
+        <h3> Joan López: Tecnico de 4to grado en Mecatronica<h3>
+        <h3> Fernando García: Tecnico de 2do grado en Programación<h3>
         
     </main>
     <footer class="centrado">
