@@ -7,17 +7,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="preload" href="css/normalize.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="preload" href="css/styles.css">
     <link rel="stylesheet" href="css/styles.css">
-    <title>login</title>
+    <title>CecyHaQ</title>
 </head>
 
 <body>
     <header class="header__nosotros">
         <a href="">
-            <img class="index__img" src="" alt="">
+            <figure class="">
+
+                <img class="nosotros__img" src="img/cecyhacklogo.png" alt="">
+            </figure>
         </a>
         <nav class="nosotros__nav">
             <a href="#">Nosotros</a>
@@ -27,18 +33,18 @@
     </header>
     <main class="informacion__nosotros">
         <div class="nostros__explicacion">
-            <h1>¡Toma el control de tu consumo eléctrico y ahorra dinero!</h1>
+            <h1 class="titulo centrado">¡Toma el control de tu consumo eléctrico y ahorra dinero!</h1>
 
             <p>¿Te gustaría saber cuánto gastas realmente en electricidad?</p>
 
-            <h2>Te ofrecemos soluciones a medida para reducir tu consumo y ahorrar dinero:</h2>
+            <h2 class="subtitulo">Te ofrecemos soluciones a medida para reducir tu consumo y ahorrar dinero:</h2>
 
             <h3>Sin inversión:</h3>
 
             <ul>
-                <li>Consejos personalizados: Recibirás recomendaciones para optimizar el uso de tus electrodomésticos y hábitos de consumo.</li>
-                <li>Monitorización inteligente: Te ayudamos a identificar los dispositivos que más energía consumen y cómo reducir su impacto.</li>
-                <li>Programa de cashback: Obtén descuentos en tu próximo recibo de luz por adoptar prácticas sostenibles.</li>
+                <li><span class="bold">Consejos personalizados</span>: Recibirás recomendaciones para optimizar el uso de tus electrodomésticos y hábitos de consumo.</li>
+                <li><span class="bold">Monitorización inteligente</span>: Te ayudamos a identificar los dispositivos que más energía consumen y cómo reducir su impacto.</li>
+                <li><span class="bold">Programa de cashback</span>: Obtén descuentos en tu próximo recibo de luz por adoptar prácticas sostenibles.</li>
             </ul>
 
             <h3>Con inversión en energía renovable:</h3>
@@ -54,8 +60,8 @@
 
         </div>
     </main>
-    <footer>
-        @ CECYHACK - All rights reserved
+    <footer class="centrado">
+        @ CECYHAQ 2024 - All rights reserved
     </footer>
 
 

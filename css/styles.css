@@ -1,3 +1,162 @@
 :root {
   --font-family-headings: "Barlow", sans-serif;
+  --font-famili-text: "Arimo", sans-serif;
+}
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font-family: var(--font-famili-text);
+  background-color: #f0f0f0;
+  color: #333;
+  font-family: var(--font-famili-text);
+}
+
+/*globals*/
+
+.bold {
+  font-weight: bold;
+}
+
+.titulo,
+.subtitulo {
+  font-family: var(--font-family-headings);
+}
+.centrado {
+  text-align: center;
+}
+
+/*index.php*/
+
+/* Header Styles */
+
+.nosotros__img {
+  height: 100rem;
+}
+.header__nosotros {
+  background-color: #28a745;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nosotros__img {
+  width: 150px;
+  height: auto;
+}
+
+.nosotros__nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nosotros__nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-weight: bold;
+}
+
+.nosotros__nav a:hover {
+  background-color: #1e8433;
+}
+
+/* Main Content Styles */
+.informacion__nosotros {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.titulo.centrado {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 3rem; /* Adjust heading size */
+  color: #28a745; /* Green heading color */
+}
+
+.subtitulo {
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 1.5rem; /* Adjust subheading size */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 15px;
+}
+
+/* List Styles */
+.sin-inversion,
+.con-inversion {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.sin-inversion h3,
+.con-inversion h3 {
+  margin-top: 0;
+}
+
+/* Button Styles */
+.btn {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #1e8433;
+}
+
+/* Additional Styles */
+.informacion__nosotros p {
+  font-size: 1rem; /* Adjust paragraph size */
+  line-height: 1.5; /* Adjust paragraph line height */
+}
+
+.nosotros__explicacion {
+  padding: 20px;
+}
+
+.sin-inversion ul {
+  padding-left: 20px; /* Indent list items */
+}
+
+.con-inversion ul {
+  padding-left: 20px;
+}
+
+.con-inversion li::before {
+  content: "✔"; /* Checkmark icon */
+  margin-right: 10px;
+  color: #28a745;
+}
+
+footer {
+  background-color: #28a745;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
 }
