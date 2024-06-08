@@ -37,7 +37,17 @@ body {
 /* Header Styles */
 
 .nosotros__img {
-  height: 100rem;
+  max-width: 200px; /* Adjust the maximum width of the image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Add rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  display: block; /* Make the image an inline-block element */
+  margin: 0 auto; /* Center the image horizontally */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.nosotros__img:hover {
+  transform: scale(1.1); /* Slightly enlarge the image on hover */
 }
 .header__nosotros {
   background-color: #28a745;
