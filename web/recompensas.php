@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -11,10 +11,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="preload" href="css/normalize.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="preload" href="css/styles.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preload" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="preload" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <title>CecyHaQ</title>
 </head>
 
@@ -36,14 +36,16 @@
         </nav>
     </header>
     <main class="informacion__nosotros">
-       <h1 title> RECOMPENSAS </h1>
-       <p> "Posibilidad de cashback": si eres ecologico y ahorras tu consumo de energia contienes una posibilidad de contraer un cashback dependiendo la acctividad realizada. <p>
-        <p> "Modalidad de rachas: Al ser ecologico y ahorrrar tu consumo de energia tines posibilidad de juntrar puntos de la aplicacion para beneficios internos o incluso solicitar un descuento en tu siguiente recibo.<p>
+        <h1 title> RECOMPENSAS </h1>
+        <p> "Posibilidad de cashback": si eres ecologico y ahorras tu consumo de energia contienes una posibilidad de contraer un cashback dependiendo la acctividad realizada.
+        <p>
+        <p> "Modalidad de rachas: Al ser ecologico y ahorrrar tu consumo de energia tines posibilidad de juntrar puntos de la aplicacion para beneficios internos o incluso solicitar un descuento en tu siguiente recibo.
+        <p>
     </main>
     <footer class="centrado">
         @ CECYHAQ 2024 - All rights reserved
     </footer>
-    
+
 </body>
 
 </html>
