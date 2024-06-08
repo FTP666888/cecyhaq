@@ -36,34 +36,16 @@
         </nav>
     </header>
     <main class="informacion__nosotros">
-        <div class="nostros__explicacion">
-            <h1 class="titulo centrado">¡Toma el control de tu consumo eléctrico y ahorra dinero!</h1>
-
-            <p>¿Te gustaría saber cuánto gastas realmente en electricidad?</p>
-
-            <h2 class="subtitulo">Te ofrecemos soluciones a medida para reducir tu consumo y ahorrar dinero:</h2>
-
-            <h3>Sin inversión:</h3>
-
-            <ul>
-                <li><span class="bold">Consejos personalizados</span>: Recibirás recomendaciones para optimizar el uso de tus electrodomésticos y hábitos de consumo.</li>
-                <li><span class="bold">Monitorización inteligente</span>: Te ayudamos a identificar los dispositivos que más energía consumen y cómo reducir su impacto.</li>
-                <li><span class="bold">Programa de cashback</span>: Obtén descuentos en tu próximo recibo de luz por adoptar prácticas sostenibles.</li>
-            </ul>
-
-            <h3>Con inversión en energía renovable:</h3>
-
-            <ul>
-                <li>Asesoría para la instalación de paneles solares: Genera tu propia energía limpia y reduce drásticamente tu dependencia de la red eléctrica.</li>
-                <li>Financiamiento flexible: Te acompañamos en todo el proceso, desde la evaluación de tu potencial solar hasta la obtención de financiamiento accesible.</li>
-                <li>Monitoreo continuo de tu sistema solar: Garantizamos el óptimo funcionamiento de tu sistema y maximizamos tu ahorro.</li>
-            </ul>
-
-            <p>Moderniza tu hogar y disfruta de un futuro más verde y económico.</p>
-            <p>¡Toma el control de tu energía y tu futuro!</p>
-
-        </div>
+        
     </main>
+    <h1>CECYhaQ<h1>
+    <h2> Hacerca del equipo :<h2>
+    <h3> Zahira Estrella: Tecnica de 4to grado en Biotecnologia<h3>
+    <h4> Jafet Delgadillo: Tecnico de 4to grado en Programación<h4>
+    <h5> Cristobal Randa: Tecnico de 4to grado en Mecatronica<h5>
+    <h6> Joan López: Tecnico de 4to grado en Mecatronica<h6>
+    <h7> Fernando García: Tecnico de 2do grado en Programación<h7>
+    
     <footer class="centrado">
         @ CECYHAQ 2024 - All rights reserved
     </footer>
