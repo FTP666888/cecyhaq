@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -75,6 +79,7 @@
             <h1 class="titulo">Premios!</h1>
             <h2 class="subtitulo">Obten premios a traves de distintas acciones</h2>
             <?php
+
             $servername = "localhost";
             $username = "root";
             $password = "";
@@ -88,18 +93,30 @@
                 die("Conexión fallida: " . $conn->connect_error);
             }
 
+            // Supongamos que el ID del usuario está almacenado en $_SESSION['usuarioID']
+            $usuarioID = $_SESSION['usuario'];
+
+            // Obtener los puntos del usuario
+            $sql = "SELECT PuntosAcumulados FROM Usuarios WHERE ID = $usuarioID";
+            $result = $conn->query($sql);
+            $row = $result->fetch_assoc();
+            $puntosUsuario = $row['PuntosAcumulados'];
+
+            echo "<h2>Tienes $puntosUsuario puntos.</h2>";
+
             // Obtener y imprimir retos
             $sql = "SELECT ID, Descripcion, PuntosNecesarios, Categoria FROM Retos";
             $result = $conn->query($sql);
 
             echo "<h2>Retos:</h2>";
-            echo "<table border='1'><tr><th>ID</th><th>Descripción</th><th>Puntos Necesarios</th><th>Categoría</th></tr>";
+            echo "<table border='1'><tr><th>ID</th><th>Descripción</th><th>Puntos Necesarios</th><th>Categoría</th><th></th></tr>";
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
-                    echo "<tr><td>" . $row["ID"] . "</td><td>" . $row["Descripcion"] . "</td><td>" . $row["PuntosNecesarios"] . "</td><td>" . $row["Categoria"] . "</td></tr>";
+                    echo "<tr><td>" . $row["ID"] . "</td><td>" . $row["Descripcion"] . "</td><td>" . $row["PuntosNecesarios"] . "</td><td>" . $row["Categoria"] . "</td>";
+                    echo "<td><button onclick=\"completarReto(" . $row["ID"] . ", " . $row["PuntosNecesarios"] . ")\">Completar</button></td></tr>";
                 }
             } else {
-                echo "<tr><td colspan='4'>No hay retos disponibles.</td></tr>";
+                echo "<tr><td colspan='5'>No hay retos disponibles.</td></tr>";
             }
             echo "</table>";
 
@@ -108,18 +125,24 @@
             $result = $conn->query($sql);
 
             echo "<h2>Recompensas:</h2>";
-            echo "<table border='1'><tr><th>ID</th><th>Descripción</th><th>Descuento</th><th>Puntos Necesarios</th></tr>";
+            echo "<table border='1'><tr><th>ID</th><th>Descripción</th><th>Descuento</th><th>Puntos Necesarios</th><th></th></tr>";
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
-                    echo "<tr><td>" . $row["ID"] . "</td><td>" . $row["Descripcion"] . "</td><td>" . $row["Descuento"] . "%</td><td>" . $row["PuntosNecesarios"] . "</td></tr>";
+                    echo "<tr><td>" . $row["ID"] . "</td><td>" . $row["Descripcion"] . "</td><td>" . $row["Descuento"] . "%</td><td>" . $row["PuntosNecesarios"] . "</td>";
+                    if ($puntosUsuario >= $row["PuntosNecesarios"]) {
+                        echo "<td><button onclick=\"reclamarRecompensa(" . $row["ID"] . ", " . $row["PuntosNecesarios"] . ")\">Reclamar</button></td></tr>";
+                    } else {
+                        echo "<td><button disabled>Reclamar</button></td></tr>";
+                    }
                 }
             } else {
-                echo "<tr><td colspan='4'>No hay recompensas disponibles.</td></tr>";
+                echo "<tr><td colspan='5'>No hay recompensas disponibles.</td></tr>";
             }
             echo "</table>";
 
             $conn->close();
             ?>
+
 
 
         </div>
