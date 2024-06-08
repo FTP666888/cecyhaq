@@ -39,7 +39,7 @@ if (isset($_POST['kwh'])) {
     }
 
     // Calcular los costos
-    $costo_por_dia = $kwh * $tarifa;
+    $costo_por_dia = $kwh * $tarifa / 30;
     $costo_por_semana = $costo_por_dia * 7;
     $costo_por_mes = $costo_por_dia * 30;
     $costo_por_anio = $costo_por_dia * 365;

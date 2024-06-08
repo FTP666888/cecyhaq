@@ -20,7 +20,7 @@
 
 <body>
     <header class="header__nosotros">
-        <a href="">
+        <a href="../index.php">
             <img class="nosotros__img" src="../img/cecyhacklogo.png" alt="">
         </a>
     </header>

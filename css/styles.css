@@ -291,6 +291,10 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #45a049;
 }
+.container__graficas {
+  display: flex;
+}
+
 /* premios */
 table {
   width: 100%;
