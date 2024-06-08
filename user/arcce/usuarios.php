@@ -77,73 +77,21 @@
 
         </aside>
         <div class="contenido">
-            <h1 class="titulo">Premios!</h1>
-            <h2 class="subtitulo">Obten premios a traves de distintas acciones</h2>
-            <?php require_once '../../php/conn.php';
-
-            // Crear conexión
-            $conn = connectDB();
-
-            // Verificar conexión
-            if ($conn->connect_error) {
-                die("Conexión fallida: " . $conn->connect_error);
-            }
-
-            // Supongamos que el ID del usuario está almacenado en $_SESSION['usuarioID']
-            $usuarioID = $_SESSION['usuario'];
-
-            // Obtener los puntos del usuario
-            // Obtener los puntos del usuario
-            $sql = "SELECT PuntosAcumulados FROM Usuarios WHERE email = '$usuarioID'";
-            $result = $conn->query($sql);
-            if ($result->num_rows > 0) {
-                $row = $result->fetch_assoc();
-                $puntosUsuario = $row['PuntosAcumulados'];
-            } else {
-                // Handle the case when there are no results
-                $puntosUsuario = 0;
-            }
-
-            echo "<h2>Tienes $puntosUsuario puntos.</h2>";
-
-            // Obtener y imprimir retos
-            $sql = "SELECT ID, Descripcion, PuntosNecesarios, Categoria FROM Retos";
-            $result = $conn->query($sql);
-
-            echo "<h2>Retos:</h2>";
-            echo "<table border='1'><tr><th>ID</th><th>Descripción</th><th>Puntos Necesarios</th><th>Categoría</th><th></th></tr>";
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    echo "<tr><td>" . $row["ID"] . "</td><td>" . $row["Descripcion"] . "</td><td>" . $row["PuntosNecesarios"] . "</td><td>" . $row["Categoria"] . "</td>";
-                    echo "<td><button onclick=\"completarReto(" . $row["ID"] . ", " . $row["PuntosNecesarios"] . ")\">Completar</button></td></tr>";
-                }
-            } else {
-                echo "<tr><td colspan='5'>No hay retos disponibles.</td></tr>";
-            }
-            echo "</table>";
-
-            // Obtener e imprimir recompensas
-            $sql = "SELECT ID, Descripcion, Descuento, PuntosNecesarios FROM Recompensas";
-            $result = $conn->query($sql);
-
-            echo "<h2>Recompensas:</h2>";
-            echo "<table border='1'><tr><th>ID</th><th>Descripción</th><th>Descuento</th><th>Puntos Necesarios</th><th></th></tr>";
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    echo "<tr><td>" . $row["ID"] . "</td><td>" . $row["Descripcion"] . "</td><td>" . $row["Descuento"] . "%</td><td>" . $row["PuntosNecesarios"] . "</td>";
-                    if ($puntosUsuario >= $row["PuntosNecesarios"]) {
-                        echo "<td><button onclick=\"reclamarRecompensa(" . $row["ID"] . ", " . $row["PuntosNecesarios"] . ")\">Reclamar</button></td></tr>";
-                    } else {
-                        echo "<td><button disabled>Reclamar</button></td></tr>";
-                    }
-                }
-            } else {
-                echo "<tr><td colspan='5'>No hay recompensas disponibles.</td></tr>";
-            }
-            echo "</table>";
-
-            $conn->close();
-            ?>
+            <h1 class="titulo">Usuarios</h1>
+            <h2 class="subtitulo">Agrega usuarios y grupos de familia, empresa o escuela </h2>
+            <button class="button__agregar">
+                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#000000">
+                    <path d="M446.67-446.67H200v-66.66h246.67V-760h66.66v246.67H760v66.66H513.33V-200h-66.66v-246.67Z" />
+                </svg>
+                Agregar un grupo
+            </button>
+            <form action="agregar_usuario.php" method="post">
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <label for="grupo">Grupo:</label><br>
+                <input type="text" id="grupo" name="grupo"><br>
+                <input type="submit" value="Agregar Usuario">
+            </form>
 
 
 
