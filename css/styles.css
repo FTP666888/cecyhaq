@@ -2,6 +2,10 @@
   --font-family-headings: "Barlow", sans-serif;
   --font-famili-text: "Arimo", sans-serif;
   --important: #28a745;
+  --background-color: #1a1a2e;
+  --text-color: #e0e0e0;
+  --input-background: #25274d;
+  --btn-background: #29648a;
 }
 html {
   box-sizing: border-box;
@@ -28,6 +32,7 @@ body {
 .titulo,
 .subtitulo {
   font-family: var(--font-family-headings);
+  color: var(--input-background);
 }
 .centrado {
   text-align: center;
@@ -84,7 +89,6 @@ body {
 
 /* Main Content Styles */
 .informacion__nosotros {
-  background-color: white;
   padding: 40px;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -175,43 +179,6 @@ footer {
 /* login */
 
 /* Define root variables */
-:root {
-  --font-family-headings: "Barlow", sans-serif;
-  --font-family-text: "Arimo", sans-serif;
-  --important: #28a745;
-}
-
-/* Global styles */
-html {
-  box-sizing: border-box;
-  font-size: 16px;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-body {
-  font-family: var(--font-family-text);
-  background-color: #f0f0f0;
-  color: #333;
-}
-
-/* Classes for specific styling */
-.bold {
-  font-weight: bold;
-}
-
-.titulo,
-.subtitulo {
-  font-family: var(--font-family-headings);
-}
-
-.centrado {
-  text-align: center;
-}
 
 /* Login form styles */
 .main__login {
@@ -219,49 +186,73 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 40px;
-  max-width: 400px; /* Limit form width to prevent excessive horizontal stretch */
-  margin: 0 auto; /* Center the form horizontally */
+  height: 100vh;
+  padding: 20px;
+  background-color: var(--important);
 }
 
 .login__form {
-  width: 100%;
-  margin-bottom: 20px;
+  background: var(--input-background);
+  padding: 20px;
+  border-radius: 8px;
 }
 
 .login__field {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
-
 .login__field label {
-  display: block;
-  margin-bottom: 5px;
-  color: #333;
-  font-weight: bold;
+  color: var(--text-color);
 }
 
-.login__field input[type="email"],
-.login__field input[type="password"] {
+.login__field input {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  font-size: 16px;
-}
-
-.login__submit {
-  background-color: var(--important);
-  color: #fff;
-  padding: 10px 20px;
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
+  border-radius: 4px;
 }
 
-.login__submit:hover {
-  background-color: #238e3a;
+.btn {
+  background-color: var(--btn-background);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--important);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/*admin panel*/
+
+.aside__navegacion {
+  flex: 0 0 200px; /* Esto hace que el ancho del aside sea de 200px y no cambie */
+  height: 100vh; /* Esto hace que el alto del aside sea igual al de la ventana del navegador */
+  position: sticky;
+  justify-content: center;
+  align-items: center;
+
+  top: 0; /* Esto hace que el aside se quede en la parte superior de la página al hacer scroll */
+}
+
+.informacion__nosotros {
+  flex-grow: 1; /* Esto hace que el main ocupe el espacio restante a la derecha del aside */
+}
+
+.navegacion__informacion {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
 }

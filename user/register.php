@@ -26,19 +26,19 @@
     </header>
     <main class="main__login">
         <div class="login__contenido">
-            <form class="login__form" action="../php/login.php" method="post">
+            <form class="login__form" action="../php/register.php" method="post">
                 <div class="login__field">
-                    <label for="username">Email</label>
-                    <input type="email" name="email" id="username" required>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
                 </div>
                 <div class="login__field">
                     <label for="password">Password</label>
                     <input type="password" name="password" id="password" required>
                 </div>
-                <input type="submit" value="Iniciar sesión" class="btn">
+                <input type="submit" value="Registrarme" class="btn">
             </form>
         </div>
-        <p class="centrado">no tienes una cuenta? <a href="register.php">registrate</a></p>
+        <p class="centrado">ya tienes una cuenta? <a href="login.php">entra</a></p>
     </main>
     <footer class="centrado">
         @ CECYHAQ 2024 - All rights reserved
